@@ -73,7 +73,7 @@ class Users(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
     name = Column(String(50), unique=True)
-    email = Column(String(50), unique=True)
+    email = Column(String(100), unique=True)
     favourite_planet = Column(Integer, ForeignKey('favourite_planet.id'))
     favourite_planet_relationship = relationship(Favourite_Planet)
     favourite_starship = Column(Integer, ForeignKey('favourite_starship.id'))
